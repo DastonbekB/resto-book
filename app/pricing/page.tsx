@@ -1,5 +1,6 @@
 "use client";
 
+import AppLogo from "@/components/Logo";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -57,6 +58,43 @@ const plans = [
     color: "border-slate-200",
     buttonColor: "bg-slate-600 hover:bg-slate-700",
   },
+  {
+    id: "basic",
+    name: "Basic",
+    description: "Ideal for small restaurants managing reservations manually",
+    price: 19,
+    originalPrice: null,
+    badge: null,
+    features: [
+      "Up to 200 reservations/month",
+      "Manual booking management",
+      "Single-location support",
+      "Admin panel access",
+      "2 staff accounts",
+      "Email notifications",
+      "Monthly CSV booking reports",
+      "Embeddable website widget",
+      "Printable reservation log"
+    ],
+    limitations: [
+      "No SMS notifications",
+      "No analytics dashboard",
+      "No API access",
+      "No multi-branch support",
+      "Limited customization"
+    ],
+    maxTables: null,
+    maxReservationsPerMonth: 200,
+    hasAnalytics: false,
+    hasSMSNotifications: false,
+    hasAPIAccess: false,
+    hasCustomBranding: false,
+    hasPrioritySupport: false,
+    icon: Calendar,
+    color: "border-yellow-300",
+    buttonColor: "bg-yellow-500 hover:bg-yellow-600"
+  }
+  ,
   {
     id: "professional",
     name: "Professional",
@@ -235,12 +273,7 @@ export default function PricingPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RB</span>
-              </div>
-              <span className="text-xl font-bold text-slate-900 dark:text-white">
-                RestoBook
-              </span>
+              <AppLogo />
             </Link>
 
             <div className="flex items-center space-x-4">
@@ -272,11 +305,10 @@ export default function PricingPage() {
             {/* Billing Toggle */}
             <div className="flex items-center justify-center space-x-4 mb-12">
               <span
-                className={`text-sm ${
-                  billingPeriod === "monthly"
+                className={`text-sm ${billingPeriod === "monthly"
                     ? "text-slate-900 dark:text-white font-medium"
                     : "text-slate-500"
-                }`}
+                  }`}
               >
                 Monthly
               </span>
@@ -286,24 +318,21 @@ export default function PricingPage() {
                     billingPeriod === "monthly" ? "yearly" : "monthly"
                   )
                 }
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  billingPeriod === "yearly" ? "bg-green-500" : "bg-slate-200"
-                }`}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${billingPeriod === "yearly" ? "bg-green-500" : "bg-slate-200"
+                  }`}
               >
                 <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    billingPeriod === "yearly"
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${billingPeriod === "yearly"
                       ? "translate-x-6"
                       : "translate-x-1"
-                  }`}
+                    }`}
                 />
               </button>
               <span
-                className={`text-sm ${
-                  billingPeriod === "yearly"
+                className={`text-sm ${billingPeriod === "yearly"
                     ? "text-slate-900 dark:text-white font-medium"
                     : "text-slate-500"
-                }`}
+                  }`}
               >
                 Yearly
               </span>
@@ -331,11 +360,10 @@ export default function PricingPage() {
                 return (
                   <Card
                     key={plan.id}
-                    className={`relative ${plan.color} ${
-                      plan.id === "professional"
+                    className={`relative ${plan.color} ${plan.id === "professional"
                         ? "scale-105 shadow-2xl"
                         : "shadow-lg"
-                    }`}
+                      }`}
                   >
                     {plan.badge && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -520,10 +548,7 @@ export default function PricingPage() {
       <footer className="bg-slate-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center space-x-2 mb-8">
-            <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">RB</span>
-            </div>
-            <span className="text-xl font-bold">RestoBook</span>
+            <AppLogo />
           </div>
           <div className="text-center text-slate-400">
             <p>&copy; 2025 RestoBook. All rights reserved.</p>

@@ -39,6 +39,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import AppLogo from "@/components/Logo";
 
 interface Restaurant {
   id: string;
@@ -719,10 +720,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">RB</span>
-                </div>
-                <span className="text-xl font-bold">RestoBook</span>
+                <AppLogo isWhite />
               </div>
               <p className="text-slate-400">
                 Making dining reservations simple and enjoyable for everyone.

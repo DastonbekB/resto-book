@@ -48,6 +48,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
+import AppLogo from "@/components/Logo";
 
 interface Restaurant {
   id: string;
@@ -390,12 +391,7 @@ function RestaurantsContent() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/restaurants" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RB</span>
-              </div>
-              <span className="text-xl font-bold text-slate-900 dark:text-white">
-                RestoBook
-              </span>
+              <AppLogo />
             </Link>
 
             <div className="flex items-center space-x-4">

@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { SignOutButton } from "@/components/ui/SignOutButton";
-import logo from "../assets/logo.svg" 
+import logo from "../../../assets/logo.svg" 
 import {
   Activity,
   AlertCircle,
@@ -164,7 +164,7 @@ export default function ReceptionAdminDashboard() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              < img className=" width=[120px]" src="logo.svg">
+              <img className=" w-[120px]" src={logo.src} />
               <span className="text-sm bg-green-100 text-green-700 px-2 py-1 rounded-full">
                 Reception Admin
               </span>

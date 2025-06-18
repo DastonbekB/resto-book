@@ -1,5 +1,6 @@
 "use client";
 
+import AppLogo from "@/components/Logo";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -255,13 +256,9 @@ export default function SubscriptionPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Link href="/dashboard/restaurant-admin">
-                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center cursor-pointer">
-                  <span className="text-white font-bold text-sm">RB</span>
-                </div>
+               <AppLogo />
               </Link>
-              <span className="text-xl font-bold text-slate-900 dark:text-white">
-                RestoBook
-              </span>
+            
               <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full">
                 Restaurant Admin
               </span>

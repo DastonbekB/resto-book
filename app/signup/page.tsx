@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Lock, Eye, EyeOff, User, Building } from "lucide-react";
+import AppLogo from "@/components/Logo";
 
 export default function SignupPage() {
   const [formData, setFormData] = useState({
@@ -89,12 +90,7 @@ export default function SignupPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">RB</span>
-            </div>
-            <span className="text-2xl font-bold text-slate-900 dark:text-white">
-              RestoBook
-            </span>
+            <AppLogo />
           </Link>
         </div>
 

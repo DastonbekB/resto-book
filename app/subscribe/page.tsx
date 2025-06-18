@@ -23,6 +23,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { CheckCircle, ArrowLeft, Loader2, Crown, Check } from "lucide-react";
+import AppLogo from "@/components/Logo";
 
 interface SubscriptionPlan {
   id: string;
@@ -143,12 +144,7 @@ function SubscribeContent() {
               <span>Back to Pricing</span>
             </Link>
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RB</span>
-              </div>
-              <span className="text-xl font-bold text-slate-900 dark:text-white">
-                RestoBook
-              </span>
+             <AppLogo />
             </div>
           </div>
         </div>

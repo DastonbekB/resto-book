@@ -1,5 +1,6 @@
 "use client";
 
+import AppLogo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
 import { SignOutButton } from "@/components/ui/SignOutButton";
 import {
@@ -115,12 +116,7 @@ export default function SuperAdminDashboard() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RB</span>
-              </div>
-              <span className="text-xl font-bold text-slate-900 dark:text-white">
-                RestoBook
-              </span>
+              <AppLogo />
               <span className="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-medium">
                 <Shield className="inline-block w-3 h-3 mr-1" />
                 Super Admin

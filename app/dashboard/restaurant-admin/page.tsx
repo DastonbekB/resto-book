@@ -16,6 +16,7 @@ import {
   CreditCard,
 } from "lucide-react";
 import { Reservation } from "@prisma/client";
+import AppLogo from "@/components/Logo";
 
 export default function RestaurantAdminDashboard() {
   const { data: session, status } = useSession();
@@ -95,12 +96,8 @@ export default function RestaurantAdminDashboard() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">RB</span>
-              </div>
-              <span className="text-xl font-bold text-slate-900 dark:text-white">
-                RestoBook
-              </span>
+              
+              <AppLogo />
               <span className="text-sm bg-orange-100 text-orange-700 px-2 py-1 rounded-full">
                 Restaurant Admin
               </span>
