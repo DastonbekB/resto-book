@@ -624,7 +624,7 @@ For questions and support:
 1. Check the documentation
 2. Review the demo accounts and sample data
 3. Examine the API endpoints and responses
-4. Contact the development team
+4. Contact: dbabokhonov@gmail.com 
 
 ---
 
