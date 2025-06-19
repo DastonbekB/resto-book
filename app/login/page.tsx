@@ -191,7 +191,7 @@ function LoginContent() {
         </div>
 
         {/* Demo Credentials */}
-        <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+        {/* <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
           <h3 className="text-sm font-medium text-blue-900 dark:text-blue-100 mb-3">
             Demo Credentials - Click to auto-fill
           </h3>
@@ -231,7 +231,7 @@ function LoginContent() {
               </div>
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
